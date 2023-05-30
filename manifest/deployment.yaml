@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-addressbook-app
-          image: <+artifact.image>
+          image: harness-poc/harness-poc:v1.0.0
           ports:
             - containerPort: 8080
