@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-addressbook-app
-          image: insta7120/harness-poc-demo:v1.0
+          image: registry.dyp.cloud/harness-poc/harness-poc:v1.0.0
           ports:
             - containerPort: 8080
