@@ -1,0 +1,30 @@
+pipeline:
+  name: harness_poc_pipeline
+  identifier: harness_poc_pipeline
+  projectIdentifier: Jenkinsdeploy
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Jenkins_build
+        identifier: Jenkins_build
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: JenkinsBuild
+                  name: Jenkins_job
+                  identifier: Jenkins_job
+                  spec:
+                    connectorRef: jenkinsconnector
+                    jobName: Harness/harness-poc
+                    jobParameter: []
+                    delegateSelectors:
+                      - helm-delegate
+                    unstableStatusAsSuccess: false
+                    useConnectorUrlForJobExecution: true
+                  timeout: 10m
+                  failureStrategies: []
+        tags: {}
