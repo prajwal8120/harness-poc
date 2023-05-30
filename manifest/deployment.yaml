@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-addressbook-app
-          image: registry.dyp.cloud/harness-poc/harness-poc:v1.0.0
+          image: <+artifact.image>
           ports:
             - containerPort: 8080
