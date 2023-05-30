@@ -13,6 +13,8 @@ spec:
       labels:
         app: my-addressbook
     spec:
+      imagePullSecrets:
+        - name: registry.dyp.cloud
       containers:
         - name: my-addressbook-app
           image: registry.dyp.cloud/harness-poc/harness-poc:v1.0.0
