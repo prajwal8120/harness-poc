@@ -29,9 +29,9 @@ pipeline:
                   failureStrategies: []
         tags: {}
     - stage:
-        name: deploy
+        name: Deploy-K8s
         identifier: deploy
-        description: ""
+        description: K8s-Cluster-Deployment
         type: Deployment
         spec:
           deploymentType: Kubernetes
